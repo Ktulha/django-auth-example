@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Аутентификация{% endblock %}</title>
+
+</head>
+<body>
+{% if form.errors %}
+    {{ form.errors }}
+{% endif %}
+
+{% block nav %}
+<nav>
+    <span>Мое приложение</span>
+    <span>
+{% if user.is_authenticated %}
+    <h2>{{ user.username }}</h2>
+    <form method="post" action="{% url 'logout' %}" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Выйти</button>
+    </form>
+{% else %}
+    <a href="{% url 'login' %}">Вход</a>
+    <a href="{% url 'signup' %}">Зарегистрироваться</a>
+{% endif %}
+    </span>
+</nav>
+{% endblock nav %}
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
