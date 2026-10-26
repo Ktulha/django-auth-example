@@ -15,6 +15,14 @@ dependencies = [
 [tool.uv]
 package = false
 
+
+[tool.ruff.lint]
+ignore = [
+    "F401",   # unused-import
+    "EXE001", # shebang-missing
+]
+
+
 [dependency-groups]
 dev = [
     "ruff>=0.17.2",
