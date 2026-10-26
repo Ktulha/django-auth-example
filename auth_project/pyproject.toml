@@ -20,6 +20,7 @@ package = false
 ignore = [
     "F401",   # unused-import
     "EXE001", # shebang-missing
+    "I001", # un-sorted or un-formatted
 ]
 
 
