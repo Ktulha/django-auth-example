@@ -16,3 +16,6 @@ jobs:
     steps:
       - name: Проверка кодв
         uses: actions/checkout@v4
+
+      - name: Установить uv
+        run: pip install uv
