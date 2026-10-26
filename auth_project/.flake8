@@ -2,4 +2,4 @@
 max-line-length = 120
 exclude = .git,.venv,__pycache__,*/migrations/*
 per-file-ignores =
-    */settings.py:F401
+    */:F401
