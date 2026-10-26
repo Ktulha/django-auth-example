@@ -33,5 +33,5 @@ jobs:
         run: uv run --with flake8 --with flake8-django flake8 .
       
       - name: Запуск тестов
-        run: uv run pytest -v
+        run: uv run --with pytest pytest -v
       
