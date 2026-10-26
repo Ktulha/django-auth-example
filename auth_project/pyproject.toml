@@ -1,0 +1,16 @@
+[project]
+name = "auth-project"
+version = "0.1.0"
+description = "Django auth CI example"
+readme = "README.md"
+authors = [
+    { name = "Ktulha", email = "9145140@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.1.2",
+    "django-allauth[socialaccount]>=65.20.1",
+]
+
+[tool.uv]
+package = false
