@@ -25,3 +25,7 @@ jobs:
 
       - name: Синхронизировать зависимости (uv sync)
         run: uv sync --frozen
+
+      - name: Пробуем прогон ruff
+        run: uv run ruff check
+      
