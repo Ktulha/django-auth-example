@@ -23,6 +23,10 @@ ignore = [
     "I001", # un-sorted or un-formatted
 ]
 
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["tests.py", "test_*.py"]
+
 
 [dependency-groups]
 dev = [
