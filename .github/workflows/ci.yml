@@ -14,8 +14,14 @@ jobs:
         working-directory: auth_project
     
     steps:
-      - name: Проверка кодв
+      - name: Проверка кода
         uses: actions/checkout@v4
 
       - name: Установить uv
         run: pip install uv
+
+      - name: Установить Python (из .python-version)
+        run: uv python install
+
+      - name: Синхронизировать зависимости (uv sync)
+        run: uv sync --frozen
